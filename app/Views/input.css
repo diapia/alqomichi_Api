@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colores exactos del diseño */
+  --color-brand-bg: #131927;
+  /* Fondo oscuro principal */
+  --color-brand-card: #1c2436;
+  /* Fondo de tarjetas */
+  --color-brand-coral: #ff6b6b;
+  /* Botones y acentos rosados */
+  --color-brand-mint: #3fdcb6;
+  /* Hero menta */
+  --color-brand-yellow: #ffd166;
+  /* Ofertas y panel amarillo */
+  --color-brand-green: #23a07a;
+  /* Testimonio verde */
+
+  /* Animaciones personalizadas */
+  --animate-marquee: marquee 20s linear infinite;
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-float-delayed: float 5s ease-in-out infinite 1.5s;
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+/* Desplazamiento suave para el menú */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ocultar barra de scroll en carruseles para que se vea limpio */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
